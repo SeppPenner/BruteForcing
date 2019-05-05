@@ -1,9 +1,14 @@
 # Bruteforcing
 Bruteforcing implementation in C#.
 
-This project was written and tested in .Net 4.7.
+This project was written and tested in .Net 4.8.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/gyev94dkfeka6csq?svg=true)](https://ci.appveyor.com/project/SeppPenner/bruteforcing-8op89)
+[![GitHub issues](https://img.shields.io/github/issues/SeppPenner/Bruteforcing.svg)](https://github.com/SeppPenner/Bruteforcing/issues)
+[![GitHub forks](https://img.shields.io/github/forks/SeppPenner/Bruteforcing.svg)](https://github.com/SeppPenner/Bruteforcing/network)
+[![GitHub stars](https://img.shields.io/github/stars/SeppPenner/Bruteforcing.svg)](https://github.com/SeppPenner/Bruteforcing/stargazers)
+[![GitHub license](https://img.shields.io/badge/license-AGPL-blue.svg)](https://raw.githubusercontent.com/SeppPenner/Bruteforcing/master/License.txt)
+[![Known Vulnerabilities](https://snyk.io/test/github/SeppPenner/Bruteforcing/badge.svg)](https://snyk.io/test/github/SeppPenner/Bruteforcing)
 
 
 ## Basic usage:
@@ -22,6 +27,7 @@ public void Bruteforce()
 Change history
 --------------
 
+* **Version 1.0.0.2 (2019-05-05)** : Updated .Net version to 4.8.
 * **Version 1.0.0.1 (2017-03-11)** : Switched to .Net 4.6.2. Reformatted code.
 * **Version 1.0.0.0 (2016-12-03)** : Added basic usage to Readme.
 * **Version 1.0.0.0 (2016-11-17)** : 1.0 release.
