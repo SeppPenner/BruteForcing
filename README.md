@@ -1,15 +1,35 @@
-# Bruteforcing
-Bruteforcing implementation in C#.
+Bruteforcing
+====================================
 
-This project was written and tested in .Net 4.8.
+Bruteforcing implementation in C#.
+This project was written and tested in .Net 5.0.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/gyev94dkfeka6csq?svg=true)](https://ci.appveyor.com/project/SeppPenner/bruteforcing-8op89)
 [![GitHub issues](https://img.shields.io/github/issues/SeppPenner/Bruteforcing.svg)](https://github.com/SeppPenner/Bruteforcing/issues)
 [![GitHub forks](https://img.shields.io/github/forks/SeppPenner/Bruteforcing.svg)](https://github.com/SeppPenner/Bruteforcing/network)
 [![GitHub stars](https://img.shields.io/github/stars/SeppPenner/Bruteforcing.svg)](https://github.com/SeppPenner/Bruteforcing/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://raw.githubusercontent.com/SeppPenner/Bruteforcing/master/License.txt)
+[![Nuget](https://img.shields.io/badge/Bruteforcing-Nuget-brightgreen.svg)](https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.Bruteforcing/)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/HaemmerElectronics.SeppPenner.Bruteforcing.svg)](https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.Bruteforcing/)
 [![Known Vulnerabilities](https://snyk.io/test/github/SeppPenner/Bruteforcing/badge.svg)](https://snyk.io/test/github/SeppPenner/Bruteforcing)
+[![Gitter](https://badges.gitter.im/CSharpBruteforcing/community.svg)](https://gitter.im/CSharpBruteforcing/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
+## Available for
+* NetFramework 4.6
+* NetFramework 4.6.2
+* NetFramework 4.7
+* NetFramework 4.7.2
+* NetFramework 4.8
+* NetStandard 2.0
+* NetStandard 2.1
+* NetCore 2.1
+* NetCore 3.1
+* Net 5.0
+
+## Net Core and Net Framework latest and LTS versions
+* https://dotnet.microsoft.com/download/dotnet-framework
+* https://dotnet.microsoft.com/download/dotnet-core
+* https://dotnet.microsoft.com/download/dotnet/5.0
 
 ## Basic usage:
 ```csharp
@@ -24,11 +44,9 @@ public void Bruteforce()
 }
 ```
 
+The project can be found on [nuget](https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.Bruteforcing/).
+
 Change history
 --------------
 
-* **Version 1.0.1.0 (2019-10-13)** : Updated nuget packages, added GitVersionTask.
-* **Version 1.0.0.2 (2019-05-05)** : Updated .Net version to 4.8.
-* **Version 1.0.0.1 (2017-03-11)** : Switched to .Net 4.6.2. Reformatted code.
-* **Version 1.0.0.0 (2016-12-03)** : Added basic usage to Readme.
-* **Version 1.0.0.0 (2016-11-17)** : 1.0 release.
+See the [Changelog](https://github.com/SeppPenner/Bruteforcing/blob/master/Changelog.md).
