@@ -46,6 +46,12 @@ public void Bruteforce()
 
 The project can be found on [nuget](https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.Bruteforcing/).
 
+## Install
+
+```bash
+dotnet add package HaemmerElectronics.SeppPenner.Bruteforcing
+```
+
 Change history
 --------------
 
