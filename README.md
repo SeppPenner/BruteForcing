@@ -31,7 +31,7 @@ This project was written and tested in .Net 5.0.
 * https://dotnet.microsoft.com/download/dotnet-core
 * https://dotnet.microsoft.com/download/dotnet/5.0
 
-## Basic usage:
+## Basic usage
 ```csharp
 public void Bruteforce()
 {
