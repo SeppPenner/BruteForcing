@@ -10,7 +10,7 @@
     <Authors>SeppPenner</Authors>
     <Company>Hämmer Electronics</Company>
     <Copyright>Copyright © Hämmer Electronics</Copyright>
-    <Description>Bruteforcing implementation in C#. This project was written and tested in .Net 5.0.</Description>
+    <Description>Bruteforcing implementation in C#. This project was written and tested in .Net 6.0.</Description>
     <PackageTags>c# bruteforcing</PackageTags>
     <PackageProjectUrl>https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.Bruteforcing/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/SeppPenner/Bruteforcing</RepositoryUrl>
