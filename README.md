@@ -2,7 +2,7 @@ Bruteforcing
 ====================================
 
 Bruteforcing implementation in C#.
-This project was written and tested in .Net 5.0.
+This project was written and tested in .Net 6.0.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/gyev94dkfeka6csq?svg=true)](https://ci.appveyor.com/project/SeppPenner/bruteforcing-8op89)
 [![GitHub issues](https://img.shields.io/github/issues/SeppPenner/Bruteforcing.svg)](https://github.com/SeppPenner/Bruteforcing/issues)
@@ -24,11 +24,12 @@ This project was written and tested in .Net 5.0.
 * NetStandard 2.1
 * NetCore 3.1
 * Net 5.0
+* Net 6.0
 
 ## Net Core and Net Framework latest and LTS versions
 * https://dotnet.microsoft.com/download/dotnet-framework
 * https://dotnet.microsoft.com/download/dotnet-core
-* https://dotnet.microsoft.com/download/dotnet/5.0
+* https://dotnet.microsoft.com/download/dotnet
 
 ## Basic usage
 ```csharp
