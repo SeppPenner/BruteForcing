@@ -2,7 +2,6 @@ Bruteforcing
 ====================================
 
 Bruteforcing implementation in C#.
-This project was written and tested in .Net 6.0.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/gyev94dkfeka6csq?svg=true)](https://ci.appveyor.com/project/SeppPenner/bruteforcing-8op89)
 [![GitHub issues](https://img.shields.io/github/issues/SeppPenner/Bruteforcing.svg)](https://github.com/SeppPenner/Bruteforcing/issues)
