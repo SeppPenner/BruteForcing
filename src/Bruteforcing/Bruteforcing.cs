@@ -11,7 +11,6 @@ namespace BruteForcing
 {
     using System;
     using System.Collections;
-    using System.Diagnostics.CodeAnalysis;
     using System.Text;
 
     /// <inheritdoc cref="IEnumerable"/>
