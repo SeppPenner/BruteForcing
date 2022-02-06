@@ -87,7 +87,6 @@ namespace BruteForcing
         /// <param name="l">The length.</param>
         /// <param name="power">The power.</param>
         /// <returns>A factoradic as <see cref="string"/>.</returns>
-        [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
         private string Factoradic(ulong l, double power)
         {
             this.stringBuilder.Length = 0;
