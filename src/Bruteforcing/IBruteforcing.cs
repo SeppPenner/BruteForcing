@@ -1,4 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="IBruteforcing.cs" company="Hämmer Electronics">
 //   Copyright (c) All rights reserved.
 // </copyright>
@@ -7,19 +7,16 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace BruteForcing
-{
-    using System.Collections;
+namespace BruteForcing;
 
+/// <summary>
+/// The brute forcing interface.
+/// </summary>
+public interface IBruteforcing
+{
     /// <summary>
-    /// The brute forcing interface.
+    /// Gets the brute forcing enumerator.
     /// </summary>
-    public interface IBruteforcing
-    {
-        /// <summary>
-        /// Gets the brute forcing enumerator.
-        /// </summary>
-        /// <returns>An <see cref="IEnumerator"/>.</returns>
-        IEnumerator GetEnumerator();
-    }
+    /// <returns>An <see cref="IEnumerator"/>.</returns>
+    IEnumerator GetEnumerator();
 }

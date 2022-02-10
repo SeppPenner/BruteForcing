@@ -14,11 +14,6 @@ Bruteforcing implementation in C#.
 [![Gitter](https://badges.gitter.im/CSharpBruteforcing/community.svg)](https://gitter.im/CSharpBruteforcing/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ## Available for
-* NetFramework 4.6
-* NetFramework 4.6.2
-* NetFramework 4.7
-* NetFramework 4.7.2
-* NetFramework 4.8
 * NetStandard 2.0
 * NetStandard 2.1
 * NetCore 3.1
