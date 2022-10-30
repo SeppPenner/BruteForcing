@@ -16,7 +16,7 @@
     <RepositoryUrl>https://github.com/SeppPenner/Bruteforcing</RepositoryUrl>
     <PackageIcon>Bruteforcing.png</PackageIcon>
     <RepositoryType>Github</RepositoryType>
-    <PackageReleaseNotes>Version 1.0.7.0 (2022-02-10): Added nullable checks, added editorconfig, added file scoped namespaces, added global usings, removed native support for Net Framework (Breaking change).</PackageReleaseNotes>
+    <PackageReleaseNotes>Version 1.0.8.0 (2022-10-30): Updated nuget packages.</PackageReleaseNotes>
     <PackageLicenseFile>License.txt</PackageLicenseFile>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
