@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netstandard2.1;netcoreapp3.1;net5.0;net6.0;net7.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;netcoreapp3.1;net6.0;net7.0</TargetFrameworks>
     <AssemblyName>Bruteforcing</AssemblyName>
     <RootNamespace>Bruteforcing</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -16,7 +16,7 @@
     <RepositoryUrl>https://github.com/SeppPenner/Bruteforcing</RepositoryUrl>
     <PackageIcon>Bruteforcing.png</PackageIcon>
     <RepositoryType>Github</RepositoryType>
-    <PackageReleaseNotes>Version 1.1.7.0 (2022-11-10): Updated NuGet packages, added support for Net7.0.</PackageReleaseNotes>
+    <PackageReleaseNotes>Version 1.0.9.0 (2022-11-10): Updated NuGet packages, added support for Net7.0, removed support for Net5.0.</PackageReleaseNotes>
     <PackageLicenseFile>License.txt</PackageLicenseFile>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
