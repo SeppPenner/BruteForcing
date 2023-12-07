@@ -16,7 +16,7 @@
         <RepositoryUrl>https://github.com/SeppPenner/Bruteforcing</RepositoryUrl>
         <PackageIcon>Bruteforcing.png</PackageIcon>
         <RepositoryType>Github</RepositoryType>
-        <PackageReleaseNotes>Version 1.0.10.0 (2023-11-13): Updated NuGet packages, removed support for netstandard, removed support for netcoreapp3.1.</PackageReleaseNotes>
+        <PackageReleaseNotes>Version 1.0.11.0 (2023-12-07): Updated NuGet packages, added suppor</PackageReleaseNotes>
         <PackageLicenseFile>License.txt</PackageLicenseFile>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <EmbedUntrackedSources>true</EmbedUntrackedSources>
