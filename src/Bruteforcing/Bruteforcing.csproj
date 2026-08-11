@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+        <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
         <AssemblyName>Bruteforcing</AssemblyName>
         <RootNamespace>Bruteforcing</RootNamespace>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -16,7 +16,7 @@
         <RepositoryUrl>https://github.com/SeppPenner/Bruteforcing</RepositoryUrl>
         <PackageIcon>Bruteforcing.png</PackageIcon>
         <RepositoryType>Github</RepositoryType>
-        <PackageReleaseNotes>Version 1.0.13.0 (2024-11-24): Removed support for Net6.0, added support for Net9.0, updated NuGet packages.</PackageReleaseNotes>
+        <PackageReleaseNotes>Version 1.0.14.0 (2026-08-11): Removed support for Net9.0, added support for Net10.0, updated NuGet packages, added a test project.</PackageReleaseNotes>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <EmbedUntrackedSources>true</EmbedUntrackedSources>
@@ -31,11 +31,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="GitVersion.MsBuild" Version="6.0.5">
+        <PackageReference Include="GitVersion.MsBuild" Version="6.8.2">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.301" PrivateAssets="All" />
     </ItemGroup>
 
     <ItemGroup>

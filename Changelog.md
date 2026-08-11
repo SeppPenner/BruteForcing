@@ -1,5 +1,6 @@
 # Change history
 
+* **Version 1.0.14.0 (2026-08-11)** : Removed support for Net9.0, added support for Net10.0, updated NuGet packages, added a test project.
 * **Version 1.0.13.0 (2024-11-24)** : Removed support for Net6.0, added support for Net9.0, updated NuGet packages.
 * **Version 1.0.12.0 (2024-05-16)** : Removed support for Net7.0.
 * **Version 1.0.11.0 (2023-12-07)** : Updated NuGet packages, added support for Net8.0.
