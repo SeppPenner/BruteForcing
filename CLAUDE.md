@@ -39,9 +39,10 @@ Layout inside `src/Bruteforcing.Tests`:
 - `GlobalUsings.cs`: all usings of the test project.
 
 Repository root: `README.md` (the only user documentation, with the usage sample and the badges),
-`Changelog.md`, `Updating.md` (the release steps), `License.txt` (MIT), `Bruteforcing.png` (the
-package icon), `BuildAndPushPackage.bat`, `Delete-BIN-OBJ-Folders.bat`, `.editorconfig` (under
-`src`), `.gitattributes` and `.gitignore`.
+`Changelog.md`, `Updating.md` (five short release lines, the complete process is under
+`## Releasing` below), `License.txt` (MIT), `Bruteforcing.png` (the package icon),
+`BuildAndPushPackage.bat`, `Delete-BIN-OBJ-Folders.bat`, `.editorconfig` (under `src`),
+`.gitattributes` and `.gitignore`.
 
 ## Build
 
@@ -135,23 +136,63 @@ Do not silently "clean up" these, they are existing behaviour:
 
 ## Releasing
 
-The steps are the ones in `Updating.md`, in order:
+**Every new version is released completely.** Changelog, README, nuget.org, GitHub Packages and a
+GitHub release belong to every version, none of these steps is optional and none of them waits for
+a separate request.
 
 1. Make the change.
-2. Update `PackageReleaseNotes` in `src/Bruteforcing/Bruteforcing.csproj` to the new version line.
+2. Update `PackageReleaseNotes` in `src/Bruteforcing/Bruteforcing.csproj` to the new version line,
+   `Version 1.0.14.0 (2026-08-11): Short description.` It is the only place in the build files that
+   names a version, and it is duplicated from the changelog by hand.
 3. Add an entry at the top of `Changelog.md` in the existing format:
    `* **Version 1.0.14.0 (2026-08-11)** : Short description.`
-4. Update the "Available for" list in `README.md` when the target frameworks change.
+4. Update `README.md` for every version. The `## Available for` list has to match the target
+   frameworks, the usage sample has to compile against the current API, and nothing there may
+   describe a state the package has left behind.
 5. Commit those.
 6. Tag the commit with the plain version number, no `v` prefix (`1.0.13`, `1.0.12`, ...). The
    existing tags are lightweight tags, create new ones the same way.
-7. `BuildAndPushPackage.bat` cleans `bin` and `obj`, builds Release and pushes `.nupkg` and
-   `.snupkg` to nuget.org and to github. It needs `NUGET_API_KEY` and `GITHUB_API_KEY` in the
-   environment. Never run it unless explicitly asked to publish.
+7. Push the commits and the tag.
+8. Only then build the package, and build it while the tag is the newest commit. GitVersion takes
+   the version from the tag plus the distance to it, so a build before the tag or after another
+   commit produces a prerelease version like `1.0.15-3+Branch.master.Sha...`, and that version
+   would end up on nuget.org. `git describe --tags` has to answer with the plain tag.
+9. Publish to nuget.org with `BuildAndPushPackage.bat`, started from the repository root, its first
+   line is `cd .\src`. It deletes every `bin` and `obj` below `src`, builds `-c Release` and pushes
+   the `.nupkg` and the `.snupkg` to nuget.org with `%NUGET_API_KEY%` and to the NuGet source named
+   `github` with `%GITHUB_API_KEY%`. It ends with `PAUSE`, so it wants a console. Call it with its
+   full path: the Claude Code shell sets `NoDefaultCurrentDirectoryInExePath=1`, so cmd does not
+   find a bare `BuildAndPushPackage.bat` in the current directory. Because it always rebuilds, it
+   is only correct as long as no commit sits on top of the tag. If one does, push the package that
+   was built from the tagged state instead, by its file name and not with the wildcard, because
+   `GeneratePackageOnBuild` leaves a `.nupkg` of every intermediate build in `bin`:
+   `dotnet nuget push HaemmerElectronics.SeppPenner.Bruteforcing.1.0.14.nupkg -s "nuget.org" --skip-duplicate -k %NUGET_API_KEY%`
+   in `src/Bruteforcing/bin/Release`. That command takes the matching `.snupkg` with it. A push to
+   nuget.org cannot be taken back, the version is burned even after unlisting. nuget.org needs a
+   few minutes to validate a new version before it is listed.
+10. Publish the same `.nupkg` to GitHub Packages,
+    `https://nuget.pkg.github.com/SeppPenner/index.json`. The script only reaches it if a NuGet
+    source named `github` is registered on the machine, `dotnet nuget list source` shows that. On
+    2026-11-24 only nuget.org was registered here, so the two `github` lines of the script fail and
+    the push has to be done by hand in `src/Bruteforcing/bin/Release`:
+    `dotnet nuget push HaemmerElectronics.SeppPenner.Bruteforcing.1.0.14.nupkg -s https://nuget.pkg.github.com/SeppPenner/index.json --skip-duplicate --api-key <token>`.
+    The API key is a GitHub token with the scope `write:packages`, for example from
+    `gh auth token`. If `gh auth status` lists no `write:packages`, the user has to run
+    `gh auth refresh -h github.com -s write:packages,read:packages`, it needs a browser login.
+    GitHub Packages takes no symbol packages, push the `.nupkg` only.
+11. Create the GitHub release:
+    `gh release create 1.0.14 -R SeppPenner/BruteForcing --verify-tag --latest --title "Version 1.0.14.0 (2026-08-11)" --notes-file <file>`.
+    The notes are the changelog sentence plus the line
+    `NuGet: https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.Bruteforcing/1.0.14`. Write
+    credits as `` `@name` `` in backticks, a bare `@name` notifies that person again.
 
 The version in the `Changelog.md` and in `PackageReleaseNotes` has four parts (`1.0.14.0`), the tag
 has three (`1.0.14`). GitVersion turns the tag into the assembly and package version, so an untagged
 commit produces something like `1.0.14-1+Branch.master.Sha...`.
+
+nuget.org holds 0.1.0, which has no tag, and every tagged version from 1.0.2 to 1.0.14. On
+2026-11-24 no tag had a GitHub release yet, and GitHub Packages held 0.1.0, 1.0.2 to 1.0.7 and
+1.0.11 to 1.0.14, the history there is incomplete.
 
 ## Git
 
