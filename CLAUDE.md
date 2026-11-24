@@ -54,8 +54,9 @@ dotnet build src/Bruteforcing.sln
 dotnet test src/Bruteforcing.sln
 ```
 
-- The library multi targets `net8.0;net10.0`, the test project targets `net10.0` only. Nothing in
-  the code is Windows specific, but the helper batch files are.
+- The library multi targets `net10.0;net11.0`, so building needs the .NET 11 SDK. The test project
+  targets `net11.0` only, keep it on the newest framework the library targets. Nothing in the code
+  is Windows specific, but the helper batch files are.
 - `GeneratePackageOnBuild` is on in the library, so **every** build packs: a `.nupkg` and a
   `.snupkg` appear in `src/Bruteforcing/bin/<configuration>`, in Debug too. The version comes from
   GitVersion, for example `1.0.14-1` for the first commit after tag `1.0.13`. The test project has
